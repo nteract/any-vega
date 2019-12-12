@@ -1,2 +1,3 @@
 # any-vega
-Interface with any vega or vega-lite version
+
+Bundle of all vega and vega-lite packages; select the proper one for each mediatype.
