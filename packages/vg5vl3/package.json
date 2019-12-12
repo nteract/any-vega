@@ -1,0 +1,9 @@
+{
+  "name": "vg5vl3",
+  "version": "1.0.0",
+  "dependencies": {
+    "vega": "^5.9.0",
+    "vega-lite": "^3.4.0",
+    "vega-embed": "^5.1.3"
+  }
+}

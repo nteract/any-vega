@@ -1,0 +1,11 @@
+{
+  "name": "any-vega",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "vega-embed-v6": "npm:vega-embed@^6",
+    "vega-embed-v5": "npm:vega-embed@^5",
+    "vega": "^5.9.0",
+    "vega-lite": "^4.0.0"
+  }
+}

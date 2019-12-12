@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base",
+  "include": ["index.ts"],
+  "references": [
+    { "path": "../vg3vl2" },
+    { "path": "../vg4vl2" },
+    { "path": "../vg5vl3" },
+    { "path": "../vg5vl4" }
+  ]
+}

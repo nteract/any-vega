@@ -1,0 +1,9 @@
+{
+  "name": "vg4vl2",
+  "version": "1.0.0",
+  "dependencies": {
+    "vega": "^4.4.0",
+    "vega-lite": "^2.7.0",
+    "vega-embed": "^5.1.3"
+  }
+}

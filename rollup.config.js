@@ -1,36 +1,40 @@
-import json from "rollup-plugin-json";
-import resolve from "rollup-plugin-node-resolve";
+import json from "@rollup/plugin-json";
+import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import cleanup from "rollup-plugin-cleanup";
-import pkg from "./package.json";
+import progress from 'rollup-plugin-progress';
+
+const options = {
+  context: "null",
+  external: [
+    "datalib",
+    "datalib/src/util",
+    "datalib/src/import/load",
+    "d3",
+    "d3-cloud",
+    "d3-force",
+    "d3-geo-projection",
+    "d3-request",
+    "d3-scale-chromatic",
+    "json-stable-stringify",
+  ],
+  plugins: [
+    progress(),
+    resolve(),
+    json(),
+    commonjs({
+      sourceMap: false,
+      ignore: ["canvas"],
+    }),
+    cleanup({ comments: "none" }),
+  ],
+};
 
 export default [
-  {
-    input: "index.js",
-    external: [
-      "datalib",
-      "datalib/src/util",
-      "datalib/src/import/load",
-      "d3",
-      "d3-cloud",
-      "d3-request",
-      "d3-scale-chromatic",
-      "json-stable-stringify"
-    ],
+  Object.assign({
+    input: "packages/any-vega/index.js",
     output: [
-      { file: pkg.main, format: "cjs" },
-      { file: pkg.module, format: "es" }
+      { dir: "dist", format: "cjs" },
     ],
-    plugins: [
-      resolve({
-        only: [/^vega.*$/]
-      }),
-      json(),
-      commonjs({
-        sourceMap: false,
-        ignore: ["canvas"]
-      }),
-      cleanup({ comments: "none" })
-    ]
-  }
+  }, options),
 ];
