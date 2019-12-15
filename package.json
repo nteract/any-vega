@@ -2,6 +2,9 @@
   "name": "@nteract/any-vega",
   "version": "0.0.0",
   "description": "Bundle of all vega and vega-lite packages; select the proper one for each mediatype",
+  "main": "packages/any-vega/index.js",
+  "module": "packages/any-vega/index.js",
+  "types": "packages/any-vega/index.d.js",
   "scripts": {
     "build": "pnpify tsc -b",
     "bundle": "webpack",
