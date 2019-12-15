@@ -1,5 +1,5 @@
 global.window = undefined;
 
-const x = require("../dist");
+const x = require("../packages/any-vega");
 
-console.log(x);
+console.log(x.vega.v5());

@@ -3,13 +3,10 @@
   "version": "0.0.0",
   "description": "Bundle of all vega and vega-lite packages; select the proper one for each mediatype",
   "scripts": {
-    "build": "tsc -b",
-    "bundle": "rollup -c",
+    "build": "pnpify tsc -b",
+    "bundle": "webpack",
     "test": "node src/test.js"
   },
-  "files": [
-    "dist"
-  ],
   "author": "nteract & vega",
   "license": "MIT",
   "private": true,
@@ -21,17 +18,16 @@
       "**"
     ]
   },
-  "dependencies": {},
   "devDependencies": {
-    "@rollup/plugin-json": "^4.0.0",
-    "@rollup/plugin-node-resolve": "^6.0.0",
-    "@rollup/plugin-replace": "^2.2.1",
-    "rollup": "^1.27.11",
-    "rollup-plugin-cleanup": "^3.1.1",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-progress": "^1.1.1",
-    "rollup-plugin-visualizer": "^3.3.1",
+    "@yarnpkg/pnpify": "^2.0.0-rc.12",
+    "pnp-webpack-plugin": "^1.5.0",
     "tslib": "^1.10.0",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.3",
+    "webpack": "^4.41.2",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "@types/node": "^12.12.17"
   }
 }
