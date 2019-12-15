@@ -2,7 +2,9 @@
   "extends": "../../tsconfig.base",
   "include": ["index.ts"],
   "references": [
-    { "path": "../vg3vl2" },
+    { "path": "../any-embed" },
+    { "path": "../vg2vl1" },
+    { "path": "../vg3vl1" },
     { "path": "../vg4vl2" },
     { "path": "../vg5vl3" },
     { "path": "../vg5vl4" }

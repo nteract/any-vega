@@ -1,11 +1,16 @@
 {
   "name": "any-vega",
-  "version": "1.0.0",
-  "dependencies": {},
-  "devDependencies": {
-    "vega-embed-v6": "npm:vega-embed@^6",
-    "vega-embed-v5": "npm:vega-embed@^5",
-    "vega": "^5.9.0",
-    "vega-lite": "^4.0.0"
-  }
+  "version": "1.0.1",
+  "author": "nteract & vega",
+  "license": "MIT",
+  "module": "index.js",
+  "types": "index.d.js",
+  "dependencies": {
+    "vg2vl1": "../any-vega/packages/vg2vl1",
+    "vg3vl1": "../any-vega/packages/vg3vl1",
+    "vg4vl2": "../any-vega/packages/vg4vl2",
+    "vg5vl3": "../any-vega/packages/vg5vl3",
+    "vg5vl4": "../any-vega/packages/vg5vl4"
+  },
+  "devDependencies": {}
 }

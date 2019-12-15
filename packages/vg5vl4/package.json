@@ -1,6 +1,10 @@
 {
   "name": "vg5vl4",
   "version": "1.0.0",
+  "author": "nteract & vega",
+  "license": "MIT",
+  "module": "index.js",
+  "types": "index.d.js",
   "dependencies": {
     "vega": "^5.9.0",
     "vega-lite": "^4.0.0",

@@ -1,29 +1,19 @@
-import * as v5 from "vega-embed-v5";
-import * as v6 from "vega-embed-v6";
+import { embed as vg2vl1 } from "vg2vl1";
+import { embed as vg3vl1 } from "vg3vl1";
+import { embed as vg4vl2 } from "vg4vl2";
+import { embed as vg5vl3 } from "vg5vl3";
+import { embed as vg5vl4 } from "vg5vl4";
 
-type EmbedV5 = (el: HTMLElement | string, spec: v5.VisualizationSpec, opt?: v5.EmbedOptions) => Promise<v5.Result>;
-type EmbedV6 = (el: HTMLElement | string, spec: v6.VisualizationSpec, opt?: v6.EmbedOptions) => Promise<v6.Result>;
-
-interface VegaEmbeds {
-    v3: EmbedV5;
-    v4: EmbedV5;
-    v5: EmbedV6;
-}
-
-export const vega: VegaEmbeds = {
-    v3: (el, spec, opt) => import("vg3vl2").then((({embed}) => embed(el, spec, opt))),
-    v4: (el, spec, opt) => import("vg4vl2").then((({embed}) => embed(el, spec, opt))),
-    v5: (el, spec, opt) => import("vg5vl4").then((({embed}) => embed(el, spec, opt))),
+export const vega = {
+    v2: vg2vl1,
+    v3: vg3vl1,
+    v4: vg4vl2,
+    v5: vg5vl4,
 };
 
-interface VegaLiteEmbeds {
-    v2: EmbedV5;
-    v3: EmbedV5;
-    v4: EmbedV6;
-}
-
-export const vegaLite: VegaLiteEmbeds = {
-    v2: (el, spec, opt) => import("vg3vl2").then((({embed}) => embed(el, spec, opt))),
-    v3: (el, spec, opt) => import("vg5vl3").then((({embed}) => embed(el, spec, opt))),
-    v4: (el, spec, opt) => import("vg5vl4").then((({embed}) => embed(el, spec, opt))),
+export const vegaLite = {
+    v1: vg3vl1,
+    v2: vg4vl2,
+    v3: vg5vl3,
+    v4: vg5vl4,
 };

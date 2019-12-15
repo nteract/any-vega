@@ -1,9 +1,0 @@
-{
-  "name": "vg3vl2",
-  "version": "1.0.0",
-  "dependencies": {
-    "vega": "^3.3.1",
-    "vega-lite": "^2.7.0",
-    "vega-embed": "^5.1.3"
-  }
-}
