@@ -81,6 +81,5 @@ typings/
 
 *.tsbuildinfo
 /dist/
-index.js
-index.d.ts
 /.yarnrc
+/.yarn/

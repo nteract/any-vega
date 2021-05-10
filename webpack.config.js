@@ -12,6 +12,7 @@ module.exports = {
         vg4vl2: "./packages/vg4vl2/index.js",
         vg5vl3: "./packages/vg5vl3/index.js",
         vg5vl4: "./packages/vg5vl4/index.js",
+        vg5vl5: "./packages/vg5vl5/index.js",
     },
     mode: "none",
     output: {

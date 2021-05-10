@@ -1,5 +1,8 @@
+// noinspection JSConstantReassignment
 global.window = undefined;
+// noinspection JSConstantReassignment
+global.self = undefined;
 
-const x = require("../packages/any-vega");
+const anyVega = require("../packages/any-vega");
 
-console.log(x.vega.v5());
+anyVega.embed({kind: "vega-lite", version: "5"}).then(console.log);
